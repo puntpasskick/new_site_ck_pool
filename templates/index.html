@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ckpool.org</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/css/cust.css" rel="stylesheet">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">ckpool.org</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Pool Status</a>
+                    </li>
+                    <li>
+                        <a href="#">Pool Work</a>
+                    </li>
+                    <li>
+                    	<a href="#">Blocks</a>
+                    <li>
+                        <a href="#">Support Tread</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div id="toprow">
+        <div class="row">
+        	<span class="align-bottom">
+			<div class="col-sm-3">
+			  <div class="well">
+			    <p class="text-center"; style="font-size:40px">Hash Rate</p>
+			    <p  class="text-center"; style="font-size:40px">6.7P</p>
+			  </div>        
+			</div>
+			<div div class= "col-sm-6">
+			    <h1 class="text-center">Welcome to ckpool.org!</h1>
+			    <h4 class="text-center">Zero Fees! Instant Payout!</h4> 
+			    <h4 class="text-center">Anonymous!</h4>
+			    <h4 class="text-center">SPLNS Bitcoin Mining For Everyone!</h4>  
+			</div>
+			<div class="col-sm-3">
+			  <div class="well">
+			    <p class="text-center" ; style="font-size:40px">Workers</p>
+			    <p  class="text-center"; style="font-size:40px">284</p>
+			  </div>        
+			</div>
+			</span>
+		</div>
+        </div>
+        <!-- /.row1 -->
+
+        <div class="row">
+			<div class="col-sm-5">
+				<div id="cust_header">
+				<h2>Ready To Start Mining?</h2>
+				</div>
+				<p>Just point your miner to one of:</p>
+					<ul>
+						<li>pool.ckpool.org:3333</li>
+						<li>pool.ckpool.org:443</li>
+					</ul>
+				<p>Miners closer to Europe please use one of:</p>
+					<ul>
+						<li>depool.ckpool.org:3333</li>
+						<li>depool.ckpool.org:443</li>
+					</ul>
+				<p>Set your username to your btcaddress with any or even no worker extension, and any password.
+				eg:</p> 
+				<code>
+				cgminer -o stratum+tcp://pool.ckpool.org:3333 -u 1PKN98VN2z5gwSGZvGKS2bj8aADZBkyhkZ.0 -p x
+				</code>
+				</p>If you enter an invalid address you will be rejected.</p>
+				<p>If you use an incompatible rental service that refuses to work on port 3333, try the following:
+				(only accepts usernames without worker extensions)</p>
+					<ul>
+						<li>pool.ckpool.org:4334</li>
+					</ul>
+				<div class="well">		
+					<p>ckpool.org currently only displays minimal per user and worker information.
+						To access user statistics, enter your BTC address below:</p>
+					  <div class="col-xs-15">
+    					<input class="form-control" id="username" type="text" onchange="UserRedir()">
+  					 </div>
+						<p>or append your username to: http://ckpool.org/users/</p>
+				</div>		
+			</div>
+			<div div class= "col-sm-7">
+				<div id="cust_header">
+				<h2>SPLNS</h2>
+				</div>
+
+<p><strong>SPLNS</strong> stands for Score Per Last N Shares. Score refers to the fact that share value is weighted by the difficulty of the share found.
+Last N Shares refers to the fact that the score is a rolling score based on N shares where N means 5 x the current difficulty.
+The rolling average is weighted according to when the shares were found - the more recent shares are the more they are worth.</p>
+
+				<div id="cust_header">
+				<h4>Features of SPLNS</h4>
+				</div>	
+<div id="cust_dict">				
+	<dl>		
+		<dt>Hop proof </dt> 
+			<dd>the system cannot be gamed to earn more by hopping on and off during lucky blocks.</dd>
+		<dt>Short "ramp up time" compared to PPLNS </dt> 
+			<dd>rewards more rapidly rise to stable levels when you first start hashing.</dd>
+		<dt>Long "ramp down time" </dt> 
+			<dd>you are still entitled to rewards for a very long period which is pool hashrate dependant rather than time dependent so you don't quickly "fall off" and earn nothing when you stop mining. Additionally this helps minimise variance for intermittent miners.</dd>
+		<dt>Lucky rewards </dt> 
+			<dd>since shares are weighted by the difficulty of the share found, if you are a small miner that has a handful of lucky high diff shares, you can earn significantly more, capped at current network difficulty.</dd>
+		<dt>Block finder rewards </dt> 
+			<dd>as per lucky rewards, a large share weight is attached to block finds (but is applied to the next block reward since user rewards are included in the existing unsolved block reward.) The sooner the next block is found, the higher the block finder reward is.</dd>
+		<dt>Malicious & faulty miner disincentives </dt>
+			 <dd>since shares are rewarded according to the difficulty of the share found, malicious miners that withhold block solves, or faulty hardware that doesn't produce high diff shares will have substantially less reward than on any other pay scheme or pool.</dd>
+	</dl>
+
+</div>
+</div> <!-- /.row2 -->
+  <div class="row">
+			<div class="col-sm-12">
+
+<p><strong>SPLNS</strong> calculation is done on the fly and updated every minute based as a product of <strong>HERP DERP.</strong></p>
+
+<dl>	
+<strong>HERP</strong> stands for Hash Extracted Rate Product - where each share is worth sqrt(MIN(share diff, network_diff) / work_diff) * work_diff / 2<br>
+<strong>DERP</strong> stands for Difficulty Extrapolated Reward Payment - where the reward equals the user's herp divided by the pool's HERP i.e. it is the expected reward should a block be found now. The pool's HERP is simply added until it reaches 5 * network difficulty. After that it is biased every minute by scaling existing HERP down to add the latest minute's HERP and all users' HERP is adjusted by the same scale the pool's was.
+
+				<div id="cust_header">
+				<h4>Additional and/or unique ckpool.org features:</h4>
+				</div>
+
+<div id="cust_dict">				
+	<dl>
+		<dt>Accurate statistics by the minute </dt><dd> while the statistics displayed at ckpool.org are rudimentary, they are updated by the minute and include accurate estimates of hash rate, herp and derp - which translates into an accurate estimate of payout should a block be solved.</dd>
+		<dt>Luck estimates </dt><dd> as the difficulty of each share is calculated into the user's herp, it is compared to an equivalent 'last N share' calculation to determine the miner's overall luck. This is done on a per worker and per user basis and displayed in the stats.The larger the miner and the longer they mine, the closer to 1 their luck will be while small miners may have much more variation.</dd>
+		<dt>Coinbase generation </dt><dd> Block solve reward is distributed directly from the block to each user, meaning each user gets a 'mined' transaction directly into their wallet as soon as the block is solved so there is no wait to get paid and no pool wallet storing user's rewards. Rewards will be considered 'immature' by bitcoin rules so will be unspendable until 100 network confirmations have passed.</dd>
+		<dt>Interleaved rewards </dt><dd> Each time a block is solved, the top 100 miners will receive a payout while 50 of the remaining smaller miners will receive a payout. Rewards will alternate between the smaller miners according to who has waited the longest for a payout. Rewards accumulate from blocks worked on even if miners are not scheduled for a payout with that block. This is done to minimise the size of the coinbase transaction to minimise latency, maximise mining hardware compatibility, and to make sure miners don't receive many small payouts which would lead to much larger fees when spending their reward. </dd>
+		<dt>Micropayments</dt><dd> payments below the dust threshold at block solve time will add to the user's herp for the next block. Once a miner's reward on successive blocks is greater than the dust threshold they will join other users with interleaved payouts.</dd>
+		<dt> Blocks are always as full as network congestion demands </dt><dd> ckpool never mines empty or light blocks and yet is still extremely fast at getting new work out to miners on block changes to minimise wasted work and decrease orphan risk.Rapid propagation of blocks thanks to high speed low latency connections across a network of bitcoin nodes to further decrease orphan risk.</dd>
+		<dt>Shares all transaction fees with miners </dt><dd> transaction fees account for a significant portion of mining reward now and as ckpool.org always mines blocks full of transactions the extra rewards can be substantial.</dd>
+		<dt>Massively scalable </dt><dd> ckpool can handle extremely large amounts of miners without detriment to performance.</dd>
+	</dl>
+</div>	
+
+<center><code>
+Pool code and pool operated and created by Con Kolivas, creator of cgminer and ckpool.<br>
+Donations graciously accepted at 14BMjogz69qe8hk9thyzbmR5pg34mVKB1e<br>
+</code></center>
+<br>
+<p>All pool code source freely available here: <a href="https://bitbucket.org/ckolivas/ckpool-splns">ckpool-splns</a> Support and live discussion on IRC: irc.freenode.net #ckpool</p>
+			</div>	
+        </div>
+        <!-- /.row3 -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+<br>
+</body>
+
+</html>
+
