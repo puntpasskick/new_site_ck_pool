@@ -45,21 +45,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">ckpool.org</a>
+                <a class="navbar-brand" href="{{ url_for('index') }}">ckpool.org</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Pool Status</a>
+                        <a href="{{ url_for('pool_status') }}">Pool Status</a>
                     </li>
                     <li>
-                        <a href="#">Pool Work</a>
+                        <a href="{{ url_for('pool_work') }}">Pool Work</a>
                     </li>
                     <li>
-                    	<a href="#">Blocks</a>
+                    	<a href="{{ url_for('blocks') }}">Blocks</a>
                     <li>
-                        <a href="#">Support Tread</a>
+                        <a href="https://bitcointalk.org/index.php?topic=1876330.0">Support Tread</a>
                     </li>
                 </ul>
             </div>
