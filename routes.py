@@ -7,7 +7,7 @@ pool_stats_cats = ['runtime','lastupdate','Users','Workers','Idle','Disconnected
 'hashrate15m','hashrate1hr','hashrate6hr','hashrate1d','hashrate7d','SPS1m','SPS5m','SPS15m','SPS1h',
 'diff','accepted','rejected','lns','herp','reward']
 
-#test git
+#test git again
 
 
 url = urllib2.urlopen('http://ckpool.org/pool/pool.status')
