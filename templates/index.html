@@ -76,7 +76,7 @@
 			<div class="col-sm-3">
 			  <div class="well">
 			    <p class="text-center"; style="font-size:40px">Hash Rate</p>
-			    <p  class="text-center"; style="font-size:40px">{{ CHR }}</p>
+			    <p  class="text-center"; style="font-size:40px">{{ hashrate1m }}</p>
 			  </div>        
 			</div>
 			<div div class= "col-sm-6">
@@ -88,7 +88,7 @@
 			<div class="col-sm-3">
 			  <div class="well">
 			    <p class="text-center" ; style="font-size:40px">Workers</p>
-			    <p  class="text-center"; style="font-size:40px">868</p>
+			    <p  class="text-center"; style="font-size:40px">{{ Workers }}</p>
 			  </div>        
 			</div>
 			</span>
@@ -201,10 +201,10 @@ Donations graciously accepted at 14BMjogz69qe8hk9thyzbmR5pg34mVKB1e<br>
     <!-- /.container -->
 
     <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
+    <script src="{{ url_for('static', filename= 'js/bootstrap.min.js') }}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename= 'js/bootstrap.min.js') }}"></script>
 <br>
 </body>
 

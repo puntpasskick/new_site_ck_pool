@@ -4,8 +4,32 @@
 
 {% block content %}
 
+<p>runtime: {{ runtime }}</p>
+<p>lastupdate: {{ lastupdate }}</p>
+<p>users: {{ Users }}</p>
+<p>workers: {{ Workers }}</p>
+<p>idle: {{ Idle }}</p>
+<p>disconnected: {{ Disconnected }}</p>
 
- {{  miners   }}
+<p>hashrate1m: {{ hashrate1m }}</p>
+<p>hashrate5m: {{ hashrate5m }}</p>
+<p>hashrate15m: {{ hashrate15m }}</p>
+<p>hashrate1hr: {{ hashrate1hr }}</p>
+<p>hashrate6hr: {{ hashrate6hr }}</p>
+<p>hashrate1d: {{ hashrate1d }}</p>
+<p>hashrate7d: {{ hashrate7d }}</p>
+
+<p>SPS1m: {{ SPS1m }}</p>
+<p>SPS5m: {{ SPS5m }} </p>
+<p>SPS15m: {{ SPS15m }}</p>
+<p>SPS1h: {{  SPS1h }}</p>
+
+<p>diff: {{ diff }}</p>
+<p>accepted: {{ accepted }}</p>
+<p>rejected: {{ rejected }} </p>
+<p>lns: {{ lns }} </p>
+<p>herp: {{ herp }} </p>
+<p>reward: {{ reward }}</p>
 
 
 {% endblock %}
