@@ -2,16 +2,12 @@ from flask import Flask, render_template
 import json
 import urllib2
 
-<<<<<<< HEAD
-pool_stats_cats = ['runtime','lastupdate','Users','Workers','Idle','Disconnected','hashrate1m','hashrate5m',
-'hashrate15m','hashrate1hr','hashrate6hr','hashrate1d','hashrate7d','SPS1m','SPS5m','SPS15m','SPS1h',
-'diff','accepted','rejected','lns','herp','reward']
-=======
->>>>>>> a107f36f48dc5413d853d47021476d479036ea93
 
 pool_stats_cats = ['runtime','lastupdate','Users','Workers','Idle','Disconnected','hashrate1m','hashrate5m',
 'hashrate15m','hashrate1hr','hashrate6hr','hashrate1d','hashrate7d','SPS1m','SPS5m','SPS15m','SPS1h',
 'diff','accepted','rejected','lns','herp','reward']
+
+#test git
 
 
 url = urllib2.urlopen('http://ckpool.org/pool/pool.status')
@@ -118,10 +114,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-<<<<<<< HEAD
-=======
 	CHR = "6.29P"
->>>>>>> a107f36f48dc5413d853d47021476d479036ea93
 	return render_template("index.html", hashrate1m=hashrate1m, Workers=Workers)
 
 
