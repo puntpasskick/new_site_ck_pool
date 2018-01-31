@@ -126,7 +126,10 @@
 					<p>ckpool.org currently only displays minimal per user and worker information.
 						To access user statistics, enter your BTC address below:</p>
 					  <div class="col-xs-15">
-    					<input class="form-control" id="username" type="text" onchange="UserRedir()">
+
+					  	<form action="{{ url_for('user') }}" method="post">
+    					<input class="form-control" placeholder="Your BTC Address" type="text" name="users_id"/>
+    					</form>
   					 </div>
 						<p>or append your username to: http://ckpool.org/users/</p>
 				</div>		

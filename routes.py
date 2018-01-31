@@ -1,14 +1,26 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import json
 import urllib2
 
 
-pool_stats_cats = ['runtime','lastupdate','Users','Workers','Idle','Disconnected','hashrate1m','hashrate5m',
+pool_stats_cat = ['runtime','lastupdate','Users','Workers','Idle','Disconnected','hashrate1m','hashrate5m',
 'hashrate15m','hashrate1hr','hashrate6hr','hashrate1d','hashrate7d','SPS1m','SPS5m','SPS15m','SPS1h',
 'diff','accepted','rejected','lns','herp','reward']
 
 #test git again
 
+
+def testing_for_loop(stat_cat1,stat_cat2):
+	url = urllib2.urlopen('http://ckpool.org/pool/pool.status')
+	for obj in url.readlines():
+		data = json.loads(obj.decode())
+	for x in pool_stats_cat:
+		if x == stat_cat1 and x in data:
+			x = data[x]
+	for y in pool_stats_cat:
+		if y == stat_cat2 and y in data:
+			y = data[y]
+	return (x,y)
 
 url = urllib2.urlopen('http://ckpool.org/pool/pool.status')
 for obj in url.readlines():
@@ -64,7 +76,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-	CHR = "6.29P"
+	testing_for_loop('hashrate1m','Workers')
 	return render_template("index.html", hashrate1m=hashrate1m, Workers=Workers)
 
 
@@ -82,6 +94,18 @@ def pool_work():
 @app.route("/blocks")
 def blocks():
 	return render_template("blocks.html")
+
+
+@app.route("/user", methods=['POST'])
+def user():
+	projectpath = request.form['users_id']
+	user_link = 'http://ckpool.org/users/'+projectpath
+	try:
+		response = urllib2.urlopen(user_link)
+	except:
+		return render_template("index.html", hashrate1m=hashrate1m, Workers=Workers)
+	miners = json.loads(response.read())
+	return render_template("users.html", projectpath=projectpath, miners=miners)
 
 if __name__ == "__main__":
 	app.run(debug=True)
